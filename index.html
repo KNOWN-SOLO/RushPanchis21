@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HBD dodamoo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#e3f4ff;
+  --accent:#ff6b81;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  overflow-x:hidden;
+  cursor:none;
+
+  /* GIF BACKGROUND */
+  background: url("bg.gif") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* COUNTDOWN */
+#countdown{
+  position:fixed; inset:0;
+  background:#cfe9ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  font-family:Pacifico;
+  font-size:80px;
+  z-index:9999;
+}
+
+/* CURSORS */
+.heart,.avo{
+  position:fixed;
+  pointer-events:none;
+  animation:fade 1s forwards;
+}
+@keyframes fade{
+  to{opacity:0; transform:translateY(-20px)}
+}
+
+/* EMOJI RAIN */
+.rain{
+  position:fixed;
+  top:-10%;
+  animation:rain 6s linear;
+  font-size:22px;
+}
+@keyframes rain{
+  to{transform:translateY(120vh)}
+}
+
+/* MAIN LAYOUT */
+.wrapper{padding:70px 40px}
+
+.layout{
+  max-width:1400px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+/* NOTES */
+.note{
+  background:rgba(255,255,255,.65);
+  padding:30px;
+  border-radius:25px;
+}
+.note h3{
+  font-family:Playfair Display;
+  margin-bottom:12px;
+  color:#444;
+}
+
+/* CARD */
+.card{
+  width:460px;
+  height:600px;
+  background:#fff;
+  border-radius:35px;
+  box-shadow:0 35px 70px rgba(0,0,0,.2);
+  padding:30px;
+  position:relative;
+}
+
+.page{
+  position:absolute;
+  inset:30px;
+  opacity:0;
+  transform:translateX(40px);
+  transition:.6s;
+}
+.page.active{
+  opacity:1;
+  transform:none;
+}
+.card h2{
+  font-family:Pacifico;
+  color:var(--accent);
+  text-align:center;
+}
+.card img{
+  width:100%;
+  height:260px;          /* control image height */
+  object-fit:cover;     /* crop nicely instead of stretching */
+  border-radius:25px;
+  margin-top:15px;
+}
+
+
+.nav{
+  position:absolute;
+  bottom:25px;
+  left:0;
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  padding:0 40px;
+}
+
+button{
+  border:none;
+  background:var(--accent);
+  color:#fff;
+  padding:9px 20px;
+  border-radius:20px;
+  cursor:pointer;
+}
+.page-number{
+  position:absolute;
+  bottom:70px;
+  width:100%;
+  text-align:center;
+}
+
+/* SECRET */
+.secret{
+  margin:90px 0;
+  width:100%;
+  background:white;
+  padding:50px 30px;
+  text-align:center;
+  border-radius:30px;
+}
+.secret input{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+.secret small{
+  display:block;
+  margin-top:10px;
+  color:#777;
+}
+.secret p{
+  display:none;
+  margin-top:25px;
+  font-size:20px;
+}
+
+/* GALLERY */
+.gallery{
+  background:#cfe9ff;
+  padding:70px 40px;
+}
+.gallery-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  border-radius:25px;
+}
+
+@media(max-width:1000px){
+  .layout{grid-template-columns:1fr}
+  .card{margin:auto}
+}
+</style>
+</head>
+
+<body>
+
+<div id="countdown">
+  <div id="countNumber">5</div>
+  <p>suttak indoo umma💗</p>
+</div>
+
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="wrapper">
+
+  <div class="layout">
+    <div class="note">
+      <h3>Banda Said NO</h3>
+      you are reading this means kesh came to see you and all hamdeema wela wenna thiyena deyak hope kisi prashyak wela na kiyala i planned everything as much as i can,u said no to my paras ne so i re created the while fking website again adu kra plwan tharamak but there are still som just ignore if my words dont suits or u dont love to read em anymore, ane wrote many fking latters but at the end ya only reading this, anyways dont ask for em kawada harima we will be able to meet ne ethakota ill give u em only if u asked for em hada hoda lamayane i CANT visit you or ayyo i lit cant do anything i planned wuna dewaluth ekka,out of nowhere this came into my mind just a website no notes no nadu simple as that,sinduwak ahenne nththam just double click the para or whatever kooo ane i wanted to visit u soo badly chuti what to doo ithin shi happens btw mehema hari oyata kiyana deyak kiynna plwan una eka gana im happi, u happy too right hehehe hinawela innone onnohoma hamadama hamawelema ummek wageee right did all this fy ne to make u smile n cuz i wanna see you happy ne ily chuttak ithin,For the first time u said ada that u are afraid loosing me kiyl fk that means me a lot no one never told me that before but i swear no ya not gonna lose me even ehema unth mn passen enw to separate us poddk amaru wei kata unth thats the only yhing ik UMMA
+    </div>
+
+    <div class="card" id="card">
+      <div class="page active">
+        <h2>Happy Birthday Rush panchii💗</h2>
+        <p style="text-align:center; font-style:italic;">yey its my girls 21st fucking Birthdayy achchiii.You are my favorite part of every day,Thank you for being the soft place my heart always wants to return to.
+Today I celebrate you, and every day after, I choose you umma
+Happy 21st Birthday, my pretty girl 🎂❤️</p>
+        <img src="image.jpg">
+      </div>
+      <div class="page"><h2>Why You?</h2>
+
+
+<p style="text-align:center; font-style:italic;">
+
+Even with all the problems, all the hard days, and all the moments that test us… I still choose you.
+I choose you when things are easy, and I choose you when they’re not.Because you’re worth every struggle, and I believe with my whole heart that better days are coming for us.<br><br>I love you more than words can explain, and I’m not going anywhere.
+No matter what we face, my heart keeps choosing you, again and again.and yk itt I see a future with you i see evrything with youu ane <br><br> Agiann i wanna say that better days are coming for us — days where we’ll look back and be proud we didn’t give up.Umma
+</p>
+
+
+</div>
+      <div class="page"><h2>“You Are Everything”</h2>
+
+
+<p style="text-align:center; font-style:italic;">
+
+I don’t even know where to start, because how do I explain that someone can be my everything?my favorite thought in the middle of chaos, my smile when nothing seems right. Every little thing you do — the way you laugh, the way you care, the way you simply exist, makes my heart fuller than I ever thought possible<br><br>I promise to hold you close.and I love you more than words could ever say. Always.Umma
+
+</p>
+
+
+
+
+
+</div>
+      <div class="page"><h2>HIYFLIITBYLHLIT</h2>
+<p style="text-align:center; font-style:italic;">
+
+I want you to know that no matter what happens, I choose you. I choose your smile, your heart, your soul,today, tomorrow, and for forever.You make every moment brighter and every day worth living for me<br>
+From the moment I met you, I knew my heart had found its home. You’re not just part of my life you are MY EVERYTHING<br><br>
+Every day with you feels like a little forever, and I can’t imagine a single tomorrow without you by my side.ILYYYYYYYYI promise to hold you close, protect your heart, and fill your days with as much love as you’ve given me the way u care bout me chuti passi ilyy
+
+</p></div>
+
+      <div class="page-number" id="num">1 / 4</div>
+      <div class="nav">
+        <button onclick="prev()">Prev</button>
+        <button onclick="next()">Next</button>
+      </div>
+    </div>
+
+    <div class="note">
+      <h3>U over Everyone </h3>
+
+    I just felt you in my heart and wanted you to know how much you mean to me.I know It's so easy to love someone when things are perfect and everything's wonderful. But to love someone when things are difficult, when they're not being perfect, when they're messing up, flaws are seen, mistakes are made, I think that's what really allows you to see how much love really is there. I think that kind of love is a lot more beautiful.and am here to be your both,truly grateful to have you my love and l'm blessed to be yours. I love you, every version of you, in all the good and bad days, you're my girlfriend, my wifey to be, you always have me, there's no letting go. Nuh uhhh anddd
+Mwaahhh<br><br> not m typing this after said u that im plyain games ane welath na sudu heta should host this and give u too fkkk hithuwata wada lassnt awa thoo and wanna remind all these things to bring a smile on ya face my pretty girl ull get to know how fking much i really loves issrht mt mnw kiwwth mona prashna arguments apita awath they mean non to me still fking love u so much i repeat no matter WHAT.You're special to me. You're the only one who I wouldn't mind losing sleep for, the only one who I can never get tired of talking to, and the only one who crosses my mind constantly throughout the day. You're the only one who can make me smile without trying, bring down my mood without the intention to and affect my emotions with every action of yours.
+I can't explain with just words how much you mean to me, but you're the only one I'm afraid of losing and the one I want to keep in my life.
+   
+
+ </div>
+  </div>
+
+  <div class="secret">
+    <h2>common yk what date this is</h2>
+    <input id="pwd" placeholder="Enter password">
+    <small>Hint:Seeds</small>
+    <p id="msg">Well well well kohoma hari mathak karan menna meya dawasa huh umma,am here to fking every single word that i already wrote for fking pages ayyoo kmk na mala wade i fw <br><br><br>
+
+Fistttt about the followers a prettty girl like u deserve flowerssss ofcc why fking not bus theres a kossak this geni dont like fresh flowers ne so that was a challange chuti ekak then got the idea bout this plastic mala and echchry e kathawa onna u got that and math asai lassnai thot soosapatath shape and u chuttk like it toone umma thiyagannawanam thiyaagannth plwan oyaata oni kalayak,ILY 
+
+
+<br><br>
+Then what bout the booksda buduammbee mage pressureth naggala keshgeth pressure naggala puduma gemak ghuwe ookata api denna meknm ask me after reading this mama kiyannmko ethkota kathawama,amaaruwen filter karala karala oyage katinma ahagena thamai oya books tika selecet krgththe hope u love them modayek wage padam karana welawe poth kiywn nthuwa welawak thibboth witharak wadapadu krgnne nthuwa kiyawala danna and the book called better than the movies mathaka widihta thats nothin bout smut thats a love story ig feedbacks balalareviews balla gththe but oyata set wennth plwan nthi wennth plwan yesss up to you kiyawala balannako himita umma
+<br><br>
+thennn monw ganada bout the chuti chuti stationery itemss highliters for potha kiyawaddi one unoth kiyl hithuw u write on em ne oooni deyk krgnna uuma and thawa sticky notes wagayak ewwath pothatama thamaiii thawaaa mnwd ane mthkath na nvm okkoma for my prettty rush panchi thamai 
+<br><br>
+and nailpolish haha lassnada ee colors tika be honnest and temme ko lassnd and u like em d kiyala amma ekka gihin gththe suduuu mn nm ee pata walata asai oya galama balanna lassanata thiyeewi oyatath kiyl hithenw bought the top code the mkkd cux vc eke mn dkka eka aduwen thiyenw hri iwara wela hari thats why oya ewele bottles pennaddi notes dagena ayyo photo ghn owa gththe nthi ewa n oya akmthi colors berala tried my best asa athi kiyala hithenaw and nthath kmk na gan inna gedrt hari "ලස්සනට ඉන්න"
+<br><br>
+thawaaa agili 10 t ara cute little thing 10 kuth thiyeee and mn aasama ewaaa Braceletsss ethana okkotma mamanam asai kellek unnm dnna thibba lol tikak thibba ethana ewtth asa wennoooni oya pothee hatiyata and the necklacee oya samanyen adina widihth ekka double layer or somth malayak lassnt thiyewi kiyla hithuw cuz of that thamai eeka gaththe and kakule dana ekkuth thibbd mnd ara nil aha thiyena eka eekth plwn thanaka dgnnko moratuwe stole ekak thibila gththe btw and ayyo amathaka unane kiyanna offially started collecting gift giya awurudde idan appee oww dec aga idn then trip eka gihin aa ee sippi katu maale gththe maathara beach ehekin danawanm danna ane nththm mawa mthak wenna thiyan inna one andd thawa rings dekak athi gold nemei ithin danagahana dwst shook lassna ekk dennmko ethkn dnawanm onna dn thiye danna ewath lassnai bro aneeeee and the earrings okatama match wewi kiyala hithuwa lassnt thibba then gaththa "ලස්සනට ඉන්නෝ"
+<br><br>
+huta amthka una the starts owa pothe hatiyata raata dilisenna oni balannako poddak biththiye gahala rata doiyaddi mawa mathak wenna thamai oka genawe heh
+anddd bro the nail thing ara nails hadala weelana blue light thing ayyo mn test kara eka there was a little heat nm thama wada krawid dnneth na ane check that tooko oyaata ithin oni wenawane owa thats why eka gththe "ලස්සනට ඉන්නෝ"mthak wenne ochchr ane meeke dnn amathaka wechcha monw hari thibboth will send u atext koo umma hrid hope my uthsahaya paid off and made u happy ehenm kaywaru karaya kapuna methanin its amost 4iii ude nagitinnth one ambe yuddyak thamaii
+<br><br><br><br>
+DUL LOVES YOU MORE THEN ANYTHINGGGG UMMA💗💗💗🦕
+<br><br><br><br>
+
+Listen to the song and photo tika dihaa balan innako umma
+
+</p>
+  </div>
+
+</div>
+
+<div class="gallery">
+  <div class="gallery-grid">
+    <img src="image1.jpg"><img src="image2.jpg"><img src="image3.jpg"><img src="image4.jpg">
+    <img src="image5.jpg"><img src="image6.jpg"><img src="image7.jpg"><img src="image8.jpg">
+  </div>
+</div>
+
+<script>
+/* COUNTDOWN */
+let c=5;
+const cd=document.getElementById("countdown");
+const cn=document.getElementById("countNumber");
+let t=setInterval(()=>{
+  cn.textContent=c--;
+  if(c<0){clearInterval(t); cd.style.display="none";}
+},1000);
+
+/* MUSIC */
+let played=false;
+document.body.addEventListener("click",()=>{
+  if(!played){music.play(); played=true;}
+});
+
+/* CARD PAGES */
+let i=0,p=document.querySelectorAll(".page"),n=document.getElementById("num");
+function show(){p.forEach(x=>x.classList.remove("active"));p[i].classList.add("active");n.textContent=`${i+1} / 4`;}
+function next(){i=(i+1)%4;show()}
+function prev(){i=(i+3)%4;show()}
+
+/* HEART CURSOR */
+document.addEventListener("mousemove",e=>{
+  if(!e.target.closest(".card")){
+    const h=document.createElement("div");
+    h.className="heart"; h.textContent="❤️";
+    h.style.left=e.clientX+"px"; h.style.top=e.clientY+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),900);
+  }
+});
+
+/* AVOCADO TAIL */
+card.addEventListener("mousemove",e=>{
+  const a=document.createElement("div");
+  a.className="avo"; a.textContent="🥑";
+  a.style.left=e.clientX+"px"; a.style.top=e.clientY+"px";
+  document.body.appendChild(a);
+  setTimeout(()=>a.remove(),900);
+});
+
+/* SECRET PASSWORD */
+pwd.addEventListener("input",()=>{
+  if(pwd.value==="0812"){
+    msg.style.display="block";
+  }
+});
+
+/* RAIN */
+setInterval(()=>{
+  const r=document.createElement("div");
+  r.className="rain"; r.textContent="🦕";
+  r.style.left=Math.random()*100+"vw";
+  document.body.appendChild(r);
+  setTimeout(()=>r.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
